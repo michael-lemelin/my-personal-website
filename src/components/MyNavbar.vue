@@ -51,6 +51,10 @@ export default {
         white-space: nowrap;
     }
 
+    .navbar {
+        margin-bottom: 1px;
+    }
+
     .navbar-name {
         margin: 0;
         margin-bottom: 15px;
@@ -63,7 +67,7 @@ export default {
 
 .navbar {
     background-color: #1f2021;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .navbar-contents {
@@ -87,7 +91,7 @@ export default {
 .navbar-name {
     font-size: 1.8rem;
     margin-left: 100px;
-    color: #bbc9bf;
+    color: #fcba03;
     cursor: pointer;
 }
 
@@ -98,7 +102,7 @@ export default {
 
 .cv-btn {
     padding: 8px 16px;
-    background-color: #bbc9bf;
+    background-color: #fcba03;
     border: none;
     color: #1f2021;
     border-radius: 2px;

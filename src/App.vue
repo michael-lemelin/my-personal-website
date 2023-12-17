@@ -78,7 +78,8 @@ body {
 
 .intro-graphic {
   padding: 25px;
-  padding-left: 150px;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .row1 {
@@ -89,19 +90,19 @@ body {
 
 .hello-box {
   width: 700px;
-  height: 220px;
+  height: 25vh;
   background-color: #6fd1a0;
 }
 
 .box2 {
   width: 500px;
-  height: 220px;
+  height: 25vh;
   background-color: #e681bb;
 }
 
 .box3 {
   width: 400px;
-  height: 220px;
+  height: 25vh;
   background-color: #84d1e3;
 }
 
@@ -113,19 +114,19 @@ body {
 
 .im-box {
   width: 450px;
-  height: 220px;
+  height: 25vh;
   background-color: #84d1e3;
 }
 
 .box5 {
   width: 700px;
-  height: 220px;
+  height: 25vh;
   background-color: #fcba03;
 }
 
 .box6{
   width: 450px;
-  height: 220px;
+  height: 25vh;
   background-color: #ab78c4;
 }
 
@@ -137,19 +138,19 @@ body {
 
 .mike-box {
   width: 300px;
-  height: 220px;
+  height: 25vh;
   background-color: #ab78c4;
 }
 
 .box8 {
   width: 650px;
-  height: 220px;
+  height: 25vh;
   background-color: #e681bb;
 }
 
 .box9 {
   width: 650px;
-  height: 220px;
+  height: 25vh;
   background-color: #6fd1a0;
 }
 </style>
