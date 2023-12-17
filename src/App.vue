@@ -2,6 +2,38 @@
   <!--NAVBAR  -->
   <MyNavbar></MyNavbar>
 
+  <div class="intro-graphic">
+    <div class="hello-box">
+
+    </div>
+    <div class="box2">
+
+    </div>
+    <div class="box3">
+
+    </div>
+
+    <div class="im-box">
+
+    </div>
+    <div class="box5">
+
+    </div>
+    <div class="box6">
+
+    </div>
+
+    <div class="mike-box">
+
+    </div>
+    <div class="box8">
+
+    </div>
+    <div class="box9">
+
+    </div>
+  </div>
+
   <!-- ABOUT ME -->
   <AboutMe></AboutMe>
 
@@ -35,5 +67,30 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+}
+
+.intro-graphic {
+  padding: 25px;
+  padding-left: 150px;
+  display: flex;
+  gap: 10px;
+}
+
+.hello-box {
+  width: 700px;
+  height: 200px;
+  background-color: #fcba03;
+}
+
+.box2 {
+  width: 500px;
+  height: 200px;
+  background-color: #fcba03;
+}
+
+.box3 {
+  width: 400px;
+  height: 200px;
+  background-color: #fcba03;
 }
 </style>
