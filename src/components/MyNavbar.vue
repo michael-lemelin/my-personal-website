@@ -7,7 +7,7 @@
             <div class="navbar-links">
                 <a href="#AboutMe" class="navbar-link">About Me</a>
                 <a href="#MyProjects" class="navbar-link">Projects</a>
-                <button class="cv-btn">Download CV</button>
+                <button @click="downloadCV" class="cv-btn">Download CV</button>
             </div>
         </div>
     </div>
@@ -18,8 +18,18 @@ export default {
     data() {
         return {
             myName: "Michael Lemelin",
+            cvFilePath: "/assets/michael-lemelin-cv.txt"
         }
     },
+
+    methods: {
+        downloadCV() {
+            const link = document.createElement('a')
+            link.href = this.cvFilePath
+            link.download = 'michael-lemelin-cv.txt'
+            link.click()
+        }
+    }
 }
 </script>
 
@@ -67,7 +77,9 @@ export default {
 
 .navbar {
     background-color: #1f2021;
-    margin-bottom: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar-contents {

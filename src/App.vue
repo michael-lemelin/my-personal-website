@@ -80,6 +80,7 @@ body {
   padding: 25px;
   padding-left: 7%;
   padding-right: 7%;
+  margin-top: 100px;
 }
 
 .row1 {
