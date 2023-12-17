@@ -1,15 +1,23 @@
 <template>
+  <!--NAVBAR  -->
+  <MyNavbar></MyNavbar>
+
+  <!-- ABOUT ME -->
   <AboutMe></AboutMe>
+
+  <!-- MY PROJECTS -->
   <MyProjects></MyProjects>
 </template>
 
 <script>
+import MyNavbar from './components/MyNavbar.vue'
 import AboutMe from './components/AboutMe.vue'
 import MyProjects from './components/MyProjects.vue'
 
 export default {
   name: 'App',
   components: {
+    MyNavbar,
     AboutMe,
     MyProjects,
   }
@@ -17,12 +25,13 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@font-face {
+  font-family: 'CustomFont';
+  src: url('@/assets/Fonts/static/CairoPlay-Light.ttf') format('ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 </style>
