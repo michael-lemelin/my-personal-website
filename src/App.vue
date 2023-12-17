@@ -31,6 +31,8 @@ export default {
 }
 
 body {
+  background-color: #101112;
+  color: white;
   margin: 0;
   padding: 0;
 }

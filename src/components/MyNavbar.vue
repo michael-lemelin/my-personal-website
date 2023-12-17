@@ -37,14 +37,15 @@ export default {
 }
 
 .navbar-name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-left: 50px;
+    color: #bbc9bf;
 }
 
 .cv-btn {
     padding: 8px 16px;
     margin-right: 50px;
-    background-color: #5f7a66;
+    background-color: #bbc9bf;
     border: none;
     color: #1f2021;
     border-radius: 2px;
