@@ -1,6 +1,6 @@
 <template>
-    <div class="AboutMe">
-        Helloooo I am michael
+    <div class="MyProjects">
+        Helloooo these are my projects
     </div>
 </template>
 
