@@ -6,7 +6,7 @@
 
     <div class="row1">
       <div class="hello-box">
-
+        <h1 :class="{ 'slide-in': loaded }" class="hello">Hello,</h1>
       </div>
       <div class="box2">
 
@@ -29,14 +29,14 @@
     </div>
 
     <div class="row3">
-      <div class="mike-box">
-
+      <div class="box9">
+        
       </div>
       <div class="box8">
-
+        
       </div>
-      <div class="box9">
-
+      <div class="mike-box">
+        <h1 :class="{ 'pop-animation': loaded }" class="mike">Mike!</h1>
       </div>
     </div>
   </div>
@@ -59,6 +59,18 @@ export default {
     MyNavbar,
     AboutMe,
     MyProjects,
+  },
+
+  data() {
+    return {
+      loaded: false
+    }
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.loaded = true
+    }, 1000)
   }
 }
 </script>
@@ -74,6 +86,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  font-family: 'CustomFont', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .intro-graphic {
@@ -81,6 +94,7 @@ body {
   padding-left: 7%;
   padding-right: 7%;
   margin-top: 100px;
+  color: #101112;
 }
 
 .row1 {
@@ -93,7 +107,28 @@ body {
   width: 700px;
   height: 25vh;
   background-color: #6fd1a0;
+  font-size: 10vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
+
+.hello {
+  opacity: 0;
+  transform: translateX(-100px);
+  text-size-adjust: auto;
+  transition: transform 0.5s ease;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+
+
+
+
 
 .box2 {
   width: 500px;
@@ -137,7 +172,7 @@ body {
   gap: 15px;
 }
 
-.mike-box {
+.box9 {
   width: 300px;
   height: 25vh;
   background-color: #ab78c4;
@@ -149,9 +184,41 @@ body {
   background-color: #e681bb;
 }
 
-.box9 {
+
+
+
+.mike-box {
   width: 650px;
   height: 25vh;
   background-color: #6fd1a0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 10vh;
+}
+
+.mike {
+  opacity: 0;
+  text-size-adjust: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pop-animation {
+  animation: popAnimation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes popAnimation {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 </style>
