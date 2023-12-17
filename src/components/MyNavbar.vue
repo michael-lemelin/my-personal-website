@@ -1,11 +1,11 @@
 <template>
     <div class="navbar">
         <div class="navbar-name">
-            <span class="my-name">{{ myName }}</span>
+            <a href="#app" class="my-name">{{ myName }}</a>
         </div>
         <div class="navbar-links">
-            <router-link to="/AboutMe" class="navbar-link">About Me</router-link>
-            <router-link to="/MyProjects" class="navbar-link">Projects</router-link>
+            <a href="#AboutMe" class="navbar-link">About Me</a>
+            <a href="#MyProjects" class="navbar-link">Projects</a>
             <button class="cv-btn">Download CV</button>
         </div>
     </div>
@@ -33,13 +33,22 @@ export default {
 }
 
 .navbar-link {
+    text-decoration: none;
+    color: inherit;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .navbar-name {
     font-size: 1.8rem;
     margin-left: 50px;
     color: #bbc9bf;
+    cursor: pointer;
+}
+
+.my-name {
+    text-decoration: none;
+    color: inherit;
 }
 
 .cv-btn {
