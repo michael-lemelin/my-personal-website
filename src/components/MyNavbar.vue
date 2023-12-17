@@ -63,6 +63,7 @@ export default {
 
 .navbar {
     background-color: #1f2021;
+    margin-bottom: 10px;
 }
 
 .navbar-contents {

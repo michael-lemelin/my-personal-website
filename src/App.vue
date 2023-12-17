@@ -3,34 +3,41 @@
   <MyNavbar></MyNavbar>
 
   <div class="intro-graphic">
-    <div class="hello-box">
 
-    </div>
-    <div class="box2">
+    <div class="row1">
+      <div class="hello-box">
 
-    </div>
-    <div class="box3">
+      </div>
+      <div class="box2">
 
-    </div>
+      </div>
+      <div class="box3">
 
-    <div class="im-box">
-
-    </div>
-    <div class="box5">
-
-    </div>
-    <div class="box6">
-
+      </div>
     </div>
 
-    <div class="mike-box">
+    <div class="row2">
+      <div class="im-box">
 
+      </div>
+      <div class="box5">
+
+      </div>
+      <div class="box6">
+
+      </div>
     </div>
-    <div class="box8">
 
-    </div>
-    <div class="box9">
+    <div class="row3">
+      <div class="mike-box">
 
+      </div>
+      <div class="box8">
+
+      </div>
+      <div class="box9">
+
+      </div>
     </div>
   </div>
 
@@ -72,25 +79,77 @@ body {
 .intro-graphic {
   padding: 25px;
   padding-left: 150px;
+}
+
+.row1 {
+  padding-bottom: 15px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
 }
 
 .hello-box {
   width: 700px;
-  height: 200px;
-  background-color: #fcba03;
+  height: 220px;
+  background-color: #6fd1a0;
 }
 
 .box2 {
   width: 500px;
-  height: 200px;
-  background-color: #fcba03;
+  height: 220px;
+  background-color: #e681bb;
 }
 
 .box3 {
   width: 400px;
-  height: 200px;
+  height: 220px;
+  background-color: #84d1e3;
+}
+
+.row2 {
+  padding-bottom: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.im-box {
+  width: 450px;
+  height: 220px;
+  background-color: #84d1e3;
+}
+
+.box5 {
+  width: 700px;
+  height: 220px;
   background-color: #fcba03;
+}
+
+.box6{
+  width: 450px;
+  height: 220px;
+  background-color: #ab78c4;
+}
+
+.row3 {
+  padding-bottom: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.mike-box {
+  width: 300px;
+  height: 220px;
+  background-color: #ab78c4;
+}
+
+.box8 {
+  width: 650px;
+  height: 220px;
+  background-color: #e681bb;
+}
+
+.box9 {
+  width: 650px;
+  height: 220px;
+  background-color: #6fd1a0;
 }
 </style>
