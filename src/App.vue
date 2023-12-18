@@ -31,7 +31,7 @@
 
     <div class="row3">
       <div class="box9">
-        
+        <img src="../src/assets/four-circles.png" :class="{ 'rotate1': rotateSmallCircles, 'show2': showImage2 }" class="four-circles" @click="rotateFourCircles"/>
       </div>
       <div class="box8">
         
@@ -67,7 +67,9 @@ export default {
       // Animation variables
       loaded: false,
       rotateOnLoad: false,
-      showImage: false
+      rotateSmallCircles: false,
+      showImage: false,
+      showImage2: false
     }
   },
 
@@ -75,7 +77,9 @@ export default {
     setTimeout(() => {
       this.loaded = true
       this.rotateOnLoad = true
+      this.rotateSmallCircles = true
       this.showImage = true
+      this.showImage2 = true
     }, 500)
   },
 
@@ -83,6 +87,9 @@ export default {
     rotateCircles() {
       this.rotateOnLoad = !this.rotateOnLoad
     },
+    rotateFourCircles() {
+      this.rotateSmallCircles = !this.rotateSmallCircles
+    }
   }
 }
 </script>
@@ -139,13 +146,13 @@ body {
 }
 
 .box2 {
-  width: 500px;
+  width: 600px;
   height: 25vh;
   background-color: #e681bb;
 }
 
 .box3 {
-  width: 400px;
+  width: 300px;
   height: 25vh;
   background-color: #84d1e3;
 }
@@ -211,7 +218,7 @@ body {
   height: auto;
   padding: 4%;
   rotate: 5deg;
-  transition: transform 3s ease, opacity 0.5s ease;;
+  transition: transform 3s ease, opacity 0.5s ease;
 }
 
 .green-circle2 {
@@ -247,6 +254,20 @@ body {
   width: 300px;
   height: 25vh;
   background-color: #ab78c4;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.four-circles {
+  opacity: 0;
+  width: 50%;
+  height: auto;
+  padding: 4%;
+  transition: transform 2s ease, opacity 0.5s ease;
+}
+.show2 {
+  opacity: 1;
 }
 
 .box8 {
