@@ -24,7 +24,8 @@
         <div :class="{ 'zoom-spin': loaded }" class="im">I'm</div>
       </div>
       <div class="box6">
-
+        <img src="../src/assets/green-circle.png" :class="{ 'rotate1': rotateOnLoad, 'show': showImage }" class="green-circle1" @click="rotateCircles"/>
+        <img src="../src/assets/green-circle.png" :class="{ 'rotate2': rotateOnLoad, 'show': showImage }" class="green-circle2" @click="rotateCircles"/>
       </div>
     </div>
 
@@ -63,14 +64,25 @@ export default {
 
   data() {
     return {
-      loaded: false
+      // Animation variables
+      loaded: false,
+      rotateOnLoad: false,
+      showImage: false
     }
   },
 
   mounted() {
     setTimeout(() => {
       this.loaded = true
+      this.rotateOnLoad = true
+      this.showImage = true
     }, 500)
+  },
+
+  methods: {
+    rotateCircles() {
+      this.rotateOnLoad = !this.rotateOnLoad
+    },
   }
 }
 </script>
@@ -108,7 +120,6 @@ body {
   width: 700px;
   height: 25vh;
   background-color: #6fd1a0;
-  font-size: 10vh;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -119,6 +130,7 @@ body {
   transform: translateX(-100px);
   text-size-adjust: auto;
   transition: transform 0.5s ease;
+  font-size: 20vh;
 }
 
 .slide-in {
@@ -152,7 +164,7 @@ body {
   width: 700px;
   height: 25vh;
   background-color: #fcba03;
-  font-size: 15vh;
+  font-size: 20vh;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -188,6 +200,37 @@ body {
   width: 450px;
   height: 25vh;
   background-color: #ab78c4;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.green-circle1 {
+  opacity: 0;
+  width: 40%;
+  height: auto;
+  padding: 4%;
+  rotate: 5deg;
+  transition: transform 3s ease, opacity 0.5s ease;;
+}
+
+.green-circle2 {
+  opacity: 0;
+  width: 40%;
+  height: auto;
+  padding: 4%;
+  rotate: 185deg;
+  transition: transform 2s ease, opacity 0.5s ease;
+}
+
+.rotate1 {
+  transform: rotate(360deg);
+}
+.rotate2 {
+  transform: rotate(-360deg);
+}
+.show {
+  opacity: 1;
 }
 
 

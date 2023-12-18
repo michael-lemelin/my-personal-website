@@ -76,6 +76,7 @@ export default {
 }
 
 .navbar {
+    z-index: 1;
     background-color: #1f2021;
     position: fixed;
     top: 0;
