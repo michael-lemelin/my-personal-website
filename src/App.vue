@@ -17,11 +17,11 @@
     </div>
 
     <div class="row2">
-      <div class="im-box">
-
-      </div>
       <div class="box5">
-
+        
+      </div>
+      <div class="im-box">
+        <div :class="{ 'zoom-spin': loaded }" class="im">I'm</div>
       </div>
       <div class="box6">
 
@@ -70,7 +70,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loaded = true
-    }, 1000)
+    }, 500)
   }
 }
 </script>
@@ -97,6 +97,7 @@ body {
   color: #101112;
 }
 
+/*********** ROW 1 ************/
 .row1 {
   padding-bottom: 15px;
   display: flex;
@@ -125,11 +126,6 @@ body {
   transform: translateX(0px);
 }
 
-
-
-
-
-
 .box2 {
   width: 500px;
   height: 25vh;
@@ -142,6 +138,10 @@ body {
   background-color: #84d1e3;
 }
 
+
+
+
+/*********** ROW 2 ************/
 .row2 {
   padding-bottom: 15px;
   display: flex;
@@ -149,15 +149,39 @@ body {
 }
 
 .im-box {
-  width: 450px;
-  height: 25vh;
-  background-color: #84d1e3;
-}
-
-.box5 {
   width: 700px;
   height: 25vh;
   background-color: #fcba03;
+  font-size: 15vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.im {
+  opacity: 0;
+  text-size-adjust: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: zoomSpinAnimation 1s forwards;
+}
+
+@keyframes zoomSpinAnimation {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.box5 {
+  width: 450px;
+  height: 25vh;
+  background-color: #84d1e3;
 }
 
 .box6{
@@ -166,6 +190,10 @@ body {
   background-color: #ab78c4;
 }
 
+
+
+
+/*********** ROW 3 ************/
 .row3 {
   padding-bottom: 15px;
   display: flex;
@@ -183,9 +211,6 @@ body {
   height: 25vh;
   background-color: #e681bb;
 }
-
-
-
 
 .mike-box {
   width: 650px;
