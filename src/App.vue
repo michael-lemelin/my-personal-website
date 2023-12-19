@@ -160,6 +160,11 @@ body {
   width: 600px;
   height: 25vh;
   background-color: #e681bb;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .box3 {
