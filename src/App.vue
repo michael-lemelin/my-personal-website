@@ -273,6 +273,7 @@ body {
   opacity: 0;
   width: 30%;
   height: 15vh;
+  margin: 6%;
   background-color: #ab78c4;
   border: 10px solid;
   rotate: 3deg;
@@ -285,7 +286,7 @@ body {
   background-color: #ab78c4;
   border: 10px solid;
   rotate: -5deg;
-  margin-left: 70px;
+  margin: 6%;
   transition: transform 3s ease, opacity 0.5s ease, border-radius 3s ease;
 }
 
