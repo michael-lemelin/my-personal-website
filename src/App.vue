@@ -12,13 +12,14 @@
 
       </div>
       <div class="box3">
-
+        <img src="../src/assets/four-circles.png" :class="{ 'rotate2': rotateSmallCircles2, 'show2': showImage2 }" class="four-circles2" @click="rotateFourCircles2"/>
       </div>
     </div>
 
     <div class="row2">
       <div class="box5">
-        
+        <div class="square1"></div>
+        <div class="square2"></div>
       </div>
       <div class="im-box">
         <div :class="{ 'zoom-spin': loaded }" class="im">I'm</div>
@@ -68,6 +69,7 @@ export default {
       loaded: false,
       rotateOnLoad: false,
       rotateSmallCircles: false,
+      rotateSmallCircles2: false,
       showImage: false,
       showImage2: false
     }
@@ -78,6 +80,7 @@ export default {
       this.loaded = true
       this.rotateOnLoad = true
       this.rotateSmallCircles = true
+      this.rotateSmallCircles2 = true
       this.showImage = true
       this.showImage2 = true
     }, 500)
@@ -89,6 +92,9 @@ export default {
     },
     rotateFourCircles() {
       this.rotateSmallCircles = !this.rotateSmallCircles
+    },
+    rotateFourCircles2() {
+      this.rotateSmallCircles2 = !this.rotateSmallCircles2
     }
   }
 }
@@ -155,8 +161,18 @@ body {
   width: 300px;
   height: 25vh;
   background-color: #84d1e3;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
+.four-circles2 {
+  opacity: 0;
+  width: 50%;
+  height: auto;
+  padding: 4%;
+  transition: transform 2s ease, opacity 0.5s ease;
+}
 
 
 
@@ -201,6 +217,9 @@ body {
   width: 450px;
   height: 25vh;
   background-color: #84d1e3;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .box6{
@@ -240,6 +259,19 @@ body {
   opacity: 1;
 }
 
+.square1 {
+  width: 30%;
+  height: 15vh;
+  background-color: #ab78c4;
+  display: flex;
+}
+.square2 {
+  width: 30%;
+  height: 15vh;
+  background-color: #ab78c4;
+  margin-left: 70px;
+}
+
 
 
 
@@ -264,7 +296,7 @@ body {
   width: 50%;
   height: auto;
   padding: 4%;
-  transition: transform 2s ease, opacity 0.5s ease;
+  transition: transform 3s ease, opacity 0.5s ease;
 }
 .show2 {
   opacity: 1;
