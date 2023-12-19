@@ -18,8 +18,8 @@
 
     <div class="row2">
       <div class="box5">
-        <div class="square1"></div>
-        <div class="square2"></div>
+        <div class="square1" :class="{ 'rotateSquare1': rotateSquares, 'show3': showImage2 }" @click="rotateSquare"></div>
+        <div class="square2" :class="{ 'rotateSquare2': rotateSquares, 'show3': showImage2 }" @click="rotateSquare"></div>
       </div>
       <div class="im-box">
         <div :class="{ 'zoom-spin': loaded }" class="im">I'm</div>
@@ -71,7 +71,8 @@ export default {
       rotateSmallCircles: false,
       rotateSmallCircles2: false,
       showImage: false,
-      showImage2: false
+      showImage2: false,
+      rotateSquares: false
     }
   },
 
@@ -83,6 +84,7 @@ export default {
       this.rotateSmallCircles2 = true
       this.showImage = true
       this.showImage2 = true
+      this.rotateSquares = true
     }, 500)
   },
 
@@ -95,6 +97,9 @@ export default {
     },
     rotateFourCircles2() {
       this.rotateSmallCircles2 = !this.rotateSmallCircles2
+    },
+    rotateSquare() {
+      this.rotateSquares = !this.rotateSquares
     }
   }
 }
@@ -260,16 +265,35 @@ body {
 }
 
 .square1 {
+  opacity: 0;
   width: 30%;
   height: 15vh;
   background-color: #ab78c4;
-  display: flex;
+  border: 10px solid;
+  rotate: 3deg;
+  transition: transform 3s ease, opacity 0.5s ease, border-radius 3s ease;
 }
 .square2 {
+  opacity: 0;
   width: 30%;
   height: 15vh;
   background-color: #ab78c4;
+  border: 10px solid;
+  rotate: -5deg;
   margin-left: 70px;
+  transition: transform 3s ease, opacity 0.5s ease, border-radius 3s ease;
+}
+
+.rotateSquare1 {
+  transform: rotate(360deg);
+  border-radius: 50%;
+}
+.rotateSquare2 {
+  transform: rotate(-360deg);
+  border-radius: 50%;
+}
+.show3{
+  opacity: 1;
 }
 
 
