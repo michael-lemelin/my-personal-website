@@ -111,6 +111,33 @@ export default {
   src: url('@/assets/Fonts/static/CairoPlay-Light.ttf') format('ttf');
 }
 
+@media screen and (max-width: 768px) {
+  .box2 {
+    display: none;
+
+  }
+  .box3 {
+    visibility: hidden;
+    position: absolute;
+  }
+  .box5 {
+    visibility: hidden;
+    position: absolute;
+  }
+  .box6 {
+    visibility: hidden;
+    position: absolute;
+  }
+  .box8 {
+    visibility: hidden;
+    position: absolute;
+  }
+  .box9 {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
 body {
   background-color: #101112;
   color: white;
@@ -160,11 +187,6 @@ body {
   width: 600px;
   height: 25vh;
   background-color: #e681bb;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  background-size: cover;
-  overflow: hidden;
 }
 
 .box3 {
